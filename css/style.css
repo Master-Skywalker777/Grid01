@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 3fr 1fr; /*Definition af kolonner*/
+    grid-template-rows: 100px 1fr 100px; /*Definition af rækker*/
+    grid-template-areas: 
+    "header header" /*i første række skal header fylde begge kolonner*/
+    "main aside" /*I anden række skal main være først og aside ved siden af til højre*/
+    "footer footer"; /*I sidste række skal footer fylde begge kolonner*/
+    min-height: 100vh;
+}
+
+header{
+    grid-area: header;
+    background-color: blue;
+    color: white;
+}
+
+main{
+    grid-area: main;
+    background-color: blueviolet;
+}
+
+aside{
+    grid-area: aside;
+    background-color: aqua;
+}
+
+footer{
+    grid-area: footer;
+    background-color: chartreuse;
+}
